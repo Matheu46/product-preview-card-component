@@ -4,6 +4,10 @@
 
 body {
     background-color: #F3EAE3;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 main {
@@ -11,11 +15,27 @@ main {
     background: white;
     border-radius: 1rem;
     overflow: hidden;
+    display: grid;
 }
 
-.perfume-img img {
-    height: 100%;
-    width: 100%;
+
+.perfume-img {
+    background: url(./images/image-product-mobile.jpg) no-repeat center;
+    background-size: cover;
+    min-height: 240px;
+}
+
+@media (min-width: 600px) {
+    main {
+        grid-template-columns: 300px 300px;
+        max-width: 600px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .perfume-img {
+        background: url(./images/image-product-desktop.jpg) no-repeat center;
+        background-size: cover;
+    }
 }
 
 .text {
